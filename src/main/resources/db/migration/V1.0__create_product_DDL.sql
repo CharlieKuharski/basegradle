@@ -1,4 +1,4 @@
-USE optilakeadmin;
+USE basegradle;
 
 CREATE TABLE IF NOT EXISTS `test` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

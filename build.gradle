@@ -4,6 +4,8 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.1.0.RELEASE'
     id "io.spring.dependency-management" version "1.0.6.RELEASE"
+    id "org.flywaydb.flyway" version "5.2.1"
+    
 }
 
 group 'basegradle'
@@ -24,4 +26,18 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-test")
     compile("org.springframework.boot:spring-boot-starter-cache")
 
+    runtime group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
+
+    compile "org.flywaydb:flyway-core:5.2.1"
+}
+
+
+flyway {
+    url = 'jdbc:mysql://127.0.0.1:3306'
+    user = 'root'
+    password = 'Cargill123!@#'
+    schemas = ['basegradle']
+    table='schema_version'
+    //locations = "classpath:/db"
+    //spring.flyway.locations=filesystem:/path/to/file/anywhere/on/the/filesystem
 }

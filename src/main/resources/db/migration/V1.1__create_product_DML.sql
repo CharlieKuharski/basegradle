@@ -1,4 +1,4 @@
-USE optilakeadmin;
+USE basegradle;
 
 ALTER TABLE `test` DISABLE KEYS;
 REPLACE INTO `test` (`id`, `payload`) VALUES
