@@ -7,5 +7,6 @@
 !README.md
 !/.gitignore
 !/build.gradle
-!/src/*
 !/settings.gradle
+!/src/
+!/sql-scripts/
