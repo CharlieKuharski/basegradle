@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+# Blacklist files/folders in same directory as the .gitignore file
+/*
+
+# But not these files...
+
+!README.md
+!/.gitignore
+!/build.gradle
+!/src/*
+!/settings.gradle
