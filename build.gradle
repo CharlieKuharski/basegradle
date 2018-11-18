@@ -1,12 +1,30 @@
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.0.RELEASE")
+    }
+    ext {
+        springCloudVersion = 'Finchley.SR2'
+    }
+}
+
 plugins {
     id 'groovy'
     id 'java'
     id 'org.springframework.boot' version '2.1.0.RELEASE'
     id "io.spring.dependency-management" version "1.0.6.RELEASE"
     id "org.flywaydb.flyway" version "5.2.1"
-    
 }
+
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-vault-dependencies:2.0.2.RELEASE'
+    }
+}
+
 
 group 'basegradle'
 version '1.0-SNAPSHOT'
@@ -17,6 +35,7 @@ targetCompatibility = 1.8
 repositories {
     mavenCentral()
 }
+
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
@@ -29,8 +48,27 @@ dependencies {
     runtime group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
 
     compile "org.flywaydb:flyway-core:5.2.1"
+
+    //vault
+    compile 'org.springframework.cloud:spring-cloud-starter-vault-config'
 }
 
+
+ext {
+    springCloudVersion = 'Finchley.SR2'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.SR2"
+    }
+}
+
+repositories {
+    maven {
+        url 'https://repo.spring.io/libs-milestone'
+    }
+}
 
 flyway {
     url = 'jdbc:mysql://127.0.0.1:3306'
