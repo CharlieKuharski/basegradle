@@ -34,8 +34,8 @@ dependencies {
 
 flyway {
     url = 'jdbc:mysql://127.0.0.1:3306'
-    user = 'root'
-    password = 'Cargill123!@#'
+    //user = 'root'
+    //password = 'Cargill123!@#'
     schemas = ['basegradle']
     table='schema_version'
     //locations = "classpath:/db"
