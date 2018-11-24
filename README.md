@@ -13,6 +13,7 @@
 +./gradlew flywayMigrate -i
 ./gradlew flywayMigrate -i  flywayInfo
 ./gradlew flywayMigrate -i  flywayInfo -Dflyway.user=root -Dflyway.password='Cargill123!@#'
+./gradlew flywayMigrate -i  flywayInfo -Dflyway.user=root -Dflyway.password='Cargill123!@#' -Dflyway.url='jdbc:mysql://127.0.0.1:3306'
 
 
 
