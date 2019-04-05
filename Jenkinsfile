@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'gradle'
+      image 'appuio/s2i-gradle-java'
     }
 
   }
