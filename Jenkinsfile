@@ -15,7 +15,7 @@ pipeline {
 
       }
       steps {
-        echo 'inititalize!!!!'
+        echo 'inititalize!!!!iuggyug'
       }
     }
   }
