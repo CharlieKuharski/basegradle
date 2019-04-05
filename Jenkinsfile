@@ -17,10 +17,5 @@ pipeline {
         echo 'inititalize!!!!'
       }
     }
-    stage('build') {
-      steps {
-        echo 'Docker build'
-      }
-    }
   }
 }
