@@ -10,7 +10,7 @@ pipeline {
       }
       steps {
         echo 'inititalize!!!!iuggyug'
-        sh './gradlew clean build'
+        sh 'gradle clean build'
       }
     }
   }
