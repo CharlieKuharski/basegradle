@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'appuio/s2i-gradle-java'
-    }
-
-  }
+  agent any
   stages {
     stage('init') {
       agent {
